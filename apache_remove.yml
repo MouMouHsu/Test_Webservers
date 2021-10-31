@@ -1,0 +1,9 @@
+---
+- name: The play name
+  hosts: Taipei
+  gather_facts: false
+  tasks:
+    - name: The task name
+      yum:
+        name: httpd
+        state: absent

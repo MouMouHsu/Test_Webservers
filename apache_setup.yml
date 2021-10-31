@@ -1,0 +1,10 @@
+---
+- name: The play name
+  hosts: Taipei
+  gather_facts: false
+  tasks:
+    - name: The task name
+      yum:
+        name: httpd
+        state: latest
+      when: ansible_facts['distribution'] == "RedHat"
